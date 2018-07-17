@@ -12,7 +12,7 @@
 .month{
   display: flex;
   flex-wrap: wrap;
-  width: 80%;
+  width: 45%;
   margin: 0 auto;
   padding: 0;
 }
@@ -36,26 +36,27 @@
 }
 
 .form {
-display: flex;
-margin: 1rem;
-justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2rem;
+  justify-content: center;
 }
 
 .input {
-display: flex;
-margin: 0 10px;
+  display: flex;
+  margin: 0 10px;
 }
 
 .input label{
-background: rgb(206, 202, 202);
-padding: .5rem;
+  background: rgb(206, 202, 202);
+  padding: .7rem;
 }
 
 .input input {
-border: solid thin rgb(122, 122, 122);
-font-size: 30px;
-text-align: center;
-width: 50px;
+  border: solid thin rgb(122, 122, 122);
+  font-size: 32px;
+  text-align: center;
+  width: 70px;
 }
 
 .start {
@@ -63,7 +64,7 @@ width: 50px;
 }
 
 .between{
-color:white;
+  color:white;
 }
 
 .end {
@@ -81,7 +82,7 @@ color:white;
   content: '';
   flex: 1 1 auto;
   height: 100%;
-  background-color: rgb(125, 0, 2141);
+  background-color: rgb(125, 0, 214);
   position: absolute;
   width: 100%;
   z-index: -1;
@@ -94,7 +95,7 @@ color:white;
   flex: 1 1 auto;
   align-items: center;
   justify-content: center;
-  height: 70%;
+  height: 80%;
 
 }
 
@@ -105,7 +106,7 @@ color:white;
   background-color:transparent;
   align-items: center;
   justify-content: center;
-  padding: 6px 0;
+  padding: 2px 0;
   border-radius: 50%;
 }
 /* FORCE SQUARE */
