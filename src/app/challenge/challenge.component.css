@@ -1,0 +1,145 @@
+
+
+.container{
+  display: block;
+  position: absolute;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  font-size: 2.5vw;
+}
+.month{
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 0 auto;
+  padding: 0;
+}
+.cell{
+  position: relative;
+  display: flex;
+  flex: 1 1 13%;
+  list-style-type: none;
+  align-items: center;
+  justify-content: center;
+}
+.cell.head{
+  color: rgb(125, 0, 214);
+  font-weight: bolder;
+}
+/* FORZA LA ALTURA IGUAL AL ANCHO PARA QUE SEA UN CUADRADO PERFECTO */
+.cell:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+
+.form {
+display: flex;
+margin: 1rem;
+justify-content: center;
+}
+
+.input {
+display: flex;
+margin: 0 10px;
+}
+
+.input label{
+background: rgb(206, 202, 202);
+padding: .5rem;
+}
+
+.input input {
+border: solid thin rgb(122, 122, 122);
+font-size: 30px;
+text-align: center;
+width: 50px;
+}
+
+.start {
+
+}
+
+.between{
+color:white;
+}
+
+.end {
+}
+/* DEL 0 al 7 BORDE SUPERIOR */
+.cell:nth-child(-n+7) {
+}
+
+/* CADA 7 BODRE IZQUIERDO EN PRIMERO */
+.cell:nth-child(7n+1) {
+
+}
+
+.between:nth-child(n+8):nth-child(-n+42) > div::after{
+  content: '';
+  flex: 1 1 auto;
+  height: 100%;
+  background-color: rgb(125, 0, 2141);
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+}
+
+/* RANGO DE FECHAS */
+.cell:nth-child(n+8):nth-child(-n+42) > div{
+  position: relative;
+  display:flex;
+  flex: 1 1 auto;
+  align-items: center;
+  justify-content: center;
+  height: 70%;
+
+}
+
+.cell:nth-child(n+8):nth-child(-n+42) > div > div{
+  position: relative;
+  display: flex;
+  flex: 0 0 50%;
+  background-color:transparent;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 0;
+  border-radius: 50%;
+}
+/* FORCE SQUARE */
+.cell:nth-child(n+9):nth-child(-n+26) > div > div:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+.month .start:nth-child(n) > div > div,
+.month .end:nth-child(n) > div > div{
+  border: 2px solid white;
+  background-color: rgb(125, 0, 214);
+  color: white;
+}
+
+.month .start:nth-child(n) > div::after{
+  position: absolute;
+  content: '';
+  height: 100%;
+  background: rgb(125, 0, 214);
+  width: 50%;
+  margin-left: 50%;
+  z-index: -1;
+  box-sizing: border-box;
+}
+
+.month .end:nth-child(n) > div::after{
+  position: absolute;
+  content: '';
+  height: 100%;
+  background: rgb(125, 0, 214);
+  width: 50%;
+  margin-left: -50%;
+  z-index: -1;
+  box-sizing: border-box;
+}
+
